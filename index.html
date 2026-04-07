@@ -1,88 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pamela Viana | Data Analyst Portfolio</title>
+    <title>Pamela Viana | Data Analyst & BI Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        h1, h2, h3 { font-family: 'JetBrains Mono', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
         body { font-family: 'Inter', sans-serif; color: #1a1a1a; }
-        .bg-purple-brand { background-color: #6366F1; }
-        .text-purple-brand { color: #6366F1; }
-        .bg-yellow-brand { background-color: #FACC15; }
+        .bg-purple-main { background-color: #6366F1; }
+        .text-purple-main { color: #6366F1; }
+        .bg-yellow-accent { background-color: #FACC15; }
+        .border-purple-main { border-color: #6366F1; }
+        
+        /* Efecto de suavizado para las tarjetas */
+        .project-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .project-card:hover { transform: translateY(-5px); border-color: #FACC15; }
     </style>
 </head>
-<body class="bg-white">
+<body class="bg-white selection:bg-yellow-200">
 
-    <nav class="flex justify-between items-center px-8 py-6 max-w-6xl mx-auto">
-        <span class="text-2xl font-bold text-purple-brand">Pamela Viana</span>
-        <div class="space-x-8 text-sm font-medium uppercase tracking-widest">
-            <a href="#about" class="hover:text-purple-brand transition">About</a>
-            <a href="#projects" class="hover:text-purple-brand transition">Projects</a>
-            <a href="mailto:tu-email@gmail.com" class="bg-yellow-brand px-4 py-2 rounded shadow-sm">Contact</a>
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-50">
+        <div class="max-w-6xl mx-auto px-8 py-5 flex justify-between items-center">
+            <span class="text-xl font-bold tracking-tighter text-purple-main">PAMELA VIANA</span>
+            <div class="hidden md:flex space-x-10 text-xs font-semibold uppercase tracking-widest text-gray-500">
+                <a href="#process" class="hover:text-purple-main transition">Methodology</a>
+                <a href="#projects" class="hover:text-purple-main transition">Work</a>
+                <a href="mailto:tu-correo@ejemplo.com" class="text-purple-main border-b-2 border-yellow-accent pb-1">Contact</a>
+            </div>
         </div>
     </nav>
 
-    <section class="max-w-4xl mx-auto text-center py-32 px-4">
-        <h1 class="text-6xl mb-6 leading-tight text-gray-900">Turning Complex Data into <span class="border-b-4 border-yellow-brand text-purple-brand">Strategic Insights</span>.</h1>
-        <p class="text-xl text-gray-500 font-light max-w-2xl mx-auto">Data Analyst & BI Professional specializing in Python, SQL, and Machine Learning to drive business growth.</p>
-    </section>
+    <header class="pt-48 pb-32 px-8">
+        <div class="max-w-4xl mx-auto">
+            <span class="inline-block px-3 py-1 bg-purple-50 text-purple-main text-xs font-bold uppercase tracking-widest rounded-full mb-6">Data Analyst & BI Specialist</span>
+            <h1 class="text-5xl md:text-7xl mb-8 leading-[1.1] text-gray-900">
+                Building bridges between <span class="text-purple-main italic">raw data</span> and <span class="underline decoration-yellow-accent decoration-4">strategic growth</span>.
+            </h1>
+            <p class="text-lg md:text-xl text-gray-500 font-light max-w-2xl leading-relaxed">
+                Expert in Python, SQL, and BI tools. I transform complex datasets into actionable narratives that drive executive decisions.
+            </p>
+        </div>
+    </header>
 
-    <section id="about" class="bg-gray-50 py-20 px-8">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 text-center">
-            <div>
-                <div class="text-4xl mb-4">🟣</div>
-                <h3 class="text-2xl mb-2">Extract & Structure</h3>
-                <p class="text-gray-600">Cleaning and architecting data foundations using SQL and Python.</p>
-            </div>
-            <div>
-                <div class="text-4xl mb-4">🟡</div>
-                <h3 class="text-2xl mb-2">Analyze & Model</h3>
-                <p class="text-gray-600">Applying statistical testing and ML to uncover hidden trends.</p>
-            </div>
-            <div>
-                <div class="text-4xl mb-4">🟣</div>
-                <h3 class="text-2xl mb-2">Visualize & Impact</h3>
-                <p class="text-gray-600">Creating high-end dashboards in Tableau and Power BI.</p>
+    <section id="process" class="py-24 px-8 bg-gray-50/50 border-y border-gray-100">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl mb-20 text-gray-900">The Data Value Chain</h2>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="relative p-10 bg-white shadow-sm rounded-2xl border-t-4 border-purple-main">
+                    <div class="absolute -top-6 left-10 w-12 h-12 bg-yellow-accent rounded-xl flex items-center justify-center font-bold text-lg shadow-md">01</div>
+                    <h3 class="text-xl font-bold mb-4 mt-2">Data Foundations</h3>
+                    <p class="text-sm leading-relaxed text-gray-600">
+                        Architecting reliable data environments. Using **SQL** and **Python** to extract, clean, and structure the bedrock for high-integrity analysis.
+                    </p>
+                </div>
+
+                <div class="relative p-10 bg-white shadow-sm rounded-2xl border-t-4 border-yellow-accent">
+                    <div class="absolute -top-6 left-10 w-12 h-12 bg-purple-main text-white rounded-xl flex items-center justify-center font-bold text-lg shadow-md">02</div>
+                    <h3 class="text-xl font-bold mb-4 mt-2">Analytical Rigor</h3>
+                    <p class="text-sm leading-relaxed text-gray-600">
+                        Uncovering the "Why" through **Statistical Testing** and **Machine Learning**. From churn prediction to hypothesis validation.
+                    </p>
+                </div>
+
+                <div class="relative p-10 bg-white shadow-sm rounded-2xl border-t-4 border-purple-main">
+                    <div class="absolute -top-6 left-10 w-12 h-12 bg-yellow-accent rounded-xl flex items-center justify-center font-bold text-lg shadow-md">03</div>
+                    <h3 class="text-xl font-bold mb-4 mt-2">Strategic Impact</h3>
+                    <p class="text-sm leading-relaxed text-gray-600">
+                        Translating code into **Business ROI**. Designing executive-grade dashboards that turn complexity into clear strategic roadmaps.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="max-w-6xl mx-auto py-24 px-8">
-        <h2 class="text-4xl mb-16 text-center">Selected Projects</h2>
+    <section id="projects" class="max-w-6xl mx-auto py-32 px-8">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+            <h2 class="text-4xl">Selected Case Studies</h2>
+            <p class="text-gray-400 text-sm max-w-xs italic">A collection of technical solutions focused on scalability and business value.</p>
+        </div>
         
-        <div class="grid md:grid-cols-2 gap-16">
-            <div class="group border-b border-gray-100 pb-8">
-                <span class="text-yellow-brand font-bold tracking-tighter text-3xl">88% Accuracy</span>
-                <h3 class="text-2xl mt-2 mb-4 group-hover:text-purple-brand transition">Interconnect Churn Prediction</h3>
-                <p class="text-gray-600 mb-6">Predictive model to identify at-risk customers using CatBoost and advanced feature engineering.</p>
-                <div class="flex gap-4">
-                    <span class="px-3 py-1 bg-purple-100 text-purple-brand text-xs rounded-full">Python</span>
-                    <span class="px-3 py-1 bg-purple-100 text-purple-brand text-xs rounded-full">ML</span>
+        <div class="grid md:grid-cols-2 gap-x-16 gap-y-24">
+            <div class="project-card group border-l border-gray-100 pl-8 transition-all">
+                <span class="text-yellow-accent font-black tracking-tighter text-4xl block mb-2">88% Accuracy</span>
+                <h3 class="text-2xl mb-4 group-hover:text-purple-main transition">Interconnect Churn Prediction</h3>
+                <p class="text-gray-500 font-light mb-8 leading-relaxed italic">Reducing customer attrition through predictive modeling and feature engineering.</p>
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <span class="px-4 py-1 border border-purple-main text-purple-main text-[10px] uppercase font-bold rounded-full">Python</span>
+                    <span class="px-4 py-1 border border-purple-main text-purple-main text-[10px] uppercase font-bold rounded-full">CatBoost</span>
+                    <span class="px-4 py-1 border border-purple-main text-purple-main text-[10px] uppercase font-bold rounded-full">Scikit-learn</span>
                 </div>
-                <a href="https://github.com/pamvianeta/Interconnect-Churn-Prediction" class="inline-block mt-6 text-sm underline font-bold">View Repository</a>
+                <a href="https://github.com/pamvianeta/Interconnect-Churn-Prediction" target="_blank" class="text-sm font-bold uppercase tracking-widest border-b-2 border-purple-main pb-1 hover:border-yellow-accent transition">Technical Repo &rarr;</a>
             </div>
 
-            <div class="group border-b border-gray-100 pb-8">
-                <span class="text-yellow-brand font-bold tracking-tighter text-3xl">10+ Hypotheses</span>
-                <h3 class="text-2xl mt-2 mb-4 group-hover:text-purple-brand transition">Taxi Demand Analysis</h3>
-                <p class="text-gray-600 mb-6">Statistical analysis of ride-share patterns in Chicago using SQL and SciPy for hypothesis testing.</p>
-                <div class="flex gap-4">
-                    <span class="px-3 py-1 bg-purple-100 text-purple-brand text-xs rounded-full">SQL</span>
-                    <span class="px-3 py-1 bg-purple-100 text-purple-brand text-xs rounded-full">Statistics</span>
+            <div class="project-card group border-l border-gray-100 pl-8 transition-all">
+                <span class="text-yellow-accent font-black tracking-tighter text-4xl block mb-2">10+ Hypotheses</span>
+                <h3 class="text-2xl mb-4 group-hover:text-purple-main transition">Taxi Demand Analysis</h3>
+                <p class="text-gray-500 font-light mb-8 leading-relaxed italic">Statistical validation of weather impact on urban transportation demand in Chicago.</p>
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <span class="px-4 py-1 border border-purple-main text-purple-main text-[10px] uppercase font-bold rounded-full">SQL</span>
+                    <span class="px-4 py-1 border border-purple-main text-purple-main text-[10px] uppercase font-bold rounded-full">SciPy</span>
+                    <span class="px-4 py-1 border border-purple-main text-purple-main text-[10px] uppercase font-bold rounded-full">Statistical Testing</span>
                 </div>
-                <a href="https://github.com/pamvianeta/Taxi-Service-Launch-Project" class="inline-block mt-6 text-sm underline font-bold">View Repository</a>
+                <a href="https://github.com/pamvianeta/Taxi-Service-Launch-Project" target="_blank" class="text-sm font-bold uppercase tracking-widest border-b-2 border-purple-main pb-1 hover:border-yellow-accent transition">Technical Repo &rarr;</a>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 text-center border-t border-gray-100">
-        <h2 class="text-3xl mb-8">Let's work together.</h2>
-        <div class="flex justify-center space-x-8">
-            <a href="https://linkedin.com/in/tu-perfil" class="text-purple-brand font-bold hover:text-yellow-brand">LinkedIn</a>
-            <a href="https://github.com/pamvianeta" class="text-purple-brand font-bold hover:text-yellow-brand">GitHub</a>
+    <footer class="bg-gray-900 text-white py-24 px-8 mt-20">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl mb-12">Ready to leverage your data?</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-10">
+                <a href="https://linkedin.com/in/tu-perfil" target="_blank" class="text-yellow-accent font-semibold tracking-widest uppercase text-sm border-b border-transparent hover:border-yellow-accent transition">LinkedIn</a>
+                <a href="https://github.com/pamvianeta" target="_blank" class="text-yellow-accent font-semibold tracking-widest uppercase text-sm border-b border-transparent hover:border-yellow-accent transition">GitHub</a>
+                <a href="mailto:tu-correo@ejemplo.com" class="px-8 py-3 bg-purple-main text-white font-bold rounded-lg hover:scale-105 transition-transform">Get in Touch</a>
+            </div>
+            <p class="mt-24 text-gray-500 text-[10px] uppercase tracking-widest">&copy; 2026 Pamela Viana | Built with Precision</p>
         </div>
     </footer>
 
